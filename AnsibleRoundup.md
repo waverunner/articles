@@ -25,7 +25,7 @@ Did you know Ansible can manage Windows nodes as well? This piece reviews basic 
 
 
 #### 10 Ansible modules you need to know
-[![](https://opensource.com/sites/default/files/styles/teaser-wide/public/lead-images/browser_blue_text_editor_web.png?itok=lcf-m6N7)]()
+[![](https://opensource.com/sites/default/files/styles/teaser-wide/public/lead-images/browser_blue_text_editor_web.png?itok=lcf-m6N7)](https://opensource.com/article/19/9/must-know-ansible-modules)
 This is a great place to start for some of the most common and basic Ansible modules all admins should know. Running commands, installing packages, and handling files are the basis for many useful automation plays.
 
 
