@@ -1,5 +1,7 @@
 # Bootstrapping machines with Ansible
 
+work in progress!
+
 ubuntu18:
 Initial install requires setup of user
 root login not allowed from ssh or console
