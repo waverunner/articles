@@ -6,20 +6,16 @@ The [Raspberry Pi Foundation](https://www.raspberrypi.org/) has introduced the n
 You can find the Raspberry Pi Imager over at the usual [Raspberry Pi Downloads](https://www.raspberrypi.org/downloads/) page.  Versions exist for Mac, Ubuntu, and Windows. I will download and demonstrate the Mac version. I imagine that the Windows installer is just as easy as Mac and I'm sure your Ubuntu fans will know how the handle the DEB package (apt-get is your friend).
 
 Installation on Mac consists of the usual DMG image that mounts to your desktop, and then a typical installer window appears:
-![install](https://github.com/waverunner/articles/blob/master/media/install.jpg)
+![install](https://github.com/waverunner/articles/blob/master/media/install.png)
 
 Simply drag the cute raspberry icon to the Application folder and you are done.  Invoke that fron Launchpad and you are presented with a series of simple buttons and menus to choose from. It really cannot be simpler than this:
-![screen](https://github.com/waverunner/articles/blob/master/media/screen.jpg)
+![screen](https://github.com/waverunner/articles/blob/master/media/screen.png)
 
 ## Images and Options available
 The default options contain quite a variety images for the various Raspberry Pi models. Raspbian is the top choice with 2 available options for a smaller "Lite" and fatter "Full" versions available. The LibreELEC Kodi entertainment system is available in various model specific builds. Ubuntu 18 & 19 have 32bit abd 64bit builds available for various Pi models. There is a RPi 4 EPROM recovery utlity, and a funciton to format your card using FAT32.  There is also a generic image insaller that I will try a little later. Pretty handy for a simple and compact utility.
 
 ## Install some images
-I had a 16g micro SD card that I decided to play with. I selected the default Raspian image, chose my attached USB/SD device, and pressed WRITE. Here is a brief example:
-
-![demo](https://github.com/waverunner/articles/blob/master/media/rpi.mp3)
-
-I didn't record the entire sequence -- I believe it was downloading the image as it was writing and took a few minutes on my wireless connection to finish. The process goes through a write and then verify process before it is finished. When it was done I ejected the device, popped the card into my RPi 3, and was treated to the usual graphical Raspbain setup wizard and desktop environment.
+I had a 16g micro SD card that I decided to play with. I selected the default Raspian image, chose my attached USB/SD device, and pressed WRITE. I believe it was downloading the image as it was writing and took a few minutes on my wireless connection to finish. The process goes through a write and then verify  before it is finished. When it was done I ejected the device, popped the card into my RPi 3, and was treated to the usual graphical Raspbain setup wizard and desktop environment.
 
 That wasn't quite enough for me; I get plenty of Linux on a daily basis was was looking for a little more today.  I went back to the [Raspberry Pi Downloads](https://www.raspberrypi.org/downloads/) page and pulled down the RISC OS image.  This process was nearly as easy.  Download the RISCOSPi.5.24.zip file, extract it, and find the ro524-1875M.img file. From the Operating System button I selected the "Use Custom" option and selected the extraced ro524-1875M.img image file.  The process was pretty much the same, the only real difference being I had to hunt around my Downloads directory for the desired image.  Once the image was finished writing, back into the Pi 3, and RISC OS was ready to go.
 
