@@ -42,9 +42,13 @@ concept of Helm Chart applications, Ansible collections, and executing a fun pro
 Rounding out the year, we saw a series of summary news articles posted on covering a wide variety of Ansible topics. Here is a brief list of items to pick from. These summary articles are packed with links to interesting Ansible developments ranging from basic tutorials, module writing, plugins, Kubernetes, video demonstrations, and Ansible community news. Check them all out, there are valuable nuggets to follow for all interests and skill levels!
 
 [Containers, networks, security, and more Ansible news](https://opensource.com/article/20/1/ansible-news-edition-six)
+
 [Tips for CI/CD pipelines and Windows users, and more Ansible news](https://opensource.com/article/20/2/ansible-news-edition-seven)
+
 [Collections signal major shift in Ansible ecosystem, and more Ansible news](https://opensource.com/article/20/2/ansible-news-edition-eight)
+
 [Ansible 101 videos with Jeff Geerling, and more Ansible news](https://opensource.com/article/20/4/ansible-news-edition-nine)
+
 [Beginner guides, Windows, networking, and more Ansible news](https://opensource.com/article/20/5/ansible-news-edition-ten)
 
 ## Have a happy New Year!
