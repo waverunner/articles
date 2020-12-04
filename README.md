@@ -1,5 +1,11 @@
 # Technical Articles
 
+Contained here is a series of technical articles I've created for publishing. I hope you find some of these articles enjoyable. Many of these may have rough edges to smooth as this site is typically used as a place for copy-editors to pull from before fixing and editing.
+
+If you are interested in having one of these posted to yout site, please contact me. I would be happy to edit these where necessary for posting.
+
+# Published 
+
 [Using Conda for Ansible Administration on MacOS](https://github.com/waverunner/articles/blob/master/condaAnsible.md) - How to install Conda package manager and ansible within a virtual environment.
 Published [Opensource.com Aug 28, 2019](https://opensource.com/article/19/8/using-conda-ansible-administration-macos)
 
