@@ -1,0 +1,34 @@
+#!/usr/bin/expect
+
+spawn ./numgame.exp
+
+set guess [expr round(rand()*100)]
+set min 0
+set max 100
+
+puts "I'm starting to guess with the number $guess"
+
+expect {
+	-re "==> " {
+		send "$guess\n"
+		expect {
+			"Too small" {
+				set min $guess
+				set guess [expr ($max+$min)/2]
+			}
+			"Too large" {
+				set max $guess
+				set guess [expr ($max+$min)/2]
+			}
+			-re "value (\[0-9]+) after (\[0-9]+) tries and (\[0-9]+)" {
+				set tries  $expect_out(2,string)
+				set secs   $expect_out(3,string)
+			}
+		}
+		exp_continue
+	}
+
+	"elapsed seconds"
+}
+
+puts "I finished your game in about $secs seconds using $tries tries"

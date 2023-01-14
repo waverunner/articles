@@ -1,0 +1,40 @@
+#!/usr/bin/expect
+
+proc used_time {start} {
+	return [expr [clock seconds] - $start]
+}
+
+set num [expr round(rand()*100)]
+set starttime [clock seconds]
+set guess -1
+set count 0
+
+send "Guess a number between 1 and 100\n"
+
+while { $guess != $num } {
+	incr count
+	send "==> "
+
+	expect {
+		-re "^(\[0-9]+)\n" {
+			send "Read in: $expect_out(1,string)\n"
+			set guess $expect_out(1,string)
+		}
+
+		-re "^(.*)\n" {
+			send "Invalid entry: $expect_out(1,string) "
+		}
+	}
+
+	if { $guess < $num } {
+		send "Too small, try again\n"
+	} elseif { $guess > $num } {
+		send "Too large, try again\n"
+	} else {
+		send "That's right!\n"
+	}
+}
+
+set used [used_time $starttime]
+
+send "You guessed value $num after $count tries and $used elapsed seconds\n"
