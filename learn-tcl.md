@@ -37,9 +37,9 @@ And then start coding in your file headed up by the usual shebang script header:
 
 So lets have a few quick words about artificats of TCL to track along with this article.
 
-Firstly, all of TCL is considered to be a series of strings.  This includes all variables which only store string values. Now, some functions may interpret these strings as numbers (ala `expr`) but ultimately all these things are stored and passed as strings. Strings are usually delineated using double quote or curly braces. Double quotes allow for variable expansion and escape sequences where as curly braces impose no expansion at all.
+Firstly, all of TCL is considered to be a series of strings.  Variables are generally treated as strings but can switch types and internal representations automatically (something you generally have no visibility to). Functions may interpret their string arguments as numbers (ala `expr`) and are only passed in by value. Strings are usually delineated using double quote or curly braces. Double quotes allow for variable expansion and escape sequences where as curly braces impose no expansion at all.
 
-Second ,TCL statments don't use end of line termination like colon or semicolon. Statement lines can be split using the back slash (\) character, however it's typical to enclose multiple statements within curly braces to avoid needing such. Curly braces are just simpler and the code formatting below reflects this. Curly braces allow for deferred evaluation of strings which allows for passing values to functions before tcl does anything like variable substitution.
+Second ,TCL statments can be separated by semicolon but usually are not. Statement lines can be split using the back slash (\) character, however it's typical to enclose multiline statements within curly braces to avoid needing this. Curly braces are just simpler and the code formatting below reflects this. Curly braces allow for deferred evaluation of strings which allows for passing values to functions before tcl does anything like variable substitution.
 
 Thirdly, TCL uses square brackets for command substitution. Anything between the square brackets is sent to a new recursive invocation of the tcl interpertor for evaluation. This is handy for calling functions in the middle of expressions or for genrating parameters to functions.
 
@@ -51,7 +51,7 @@ proc used_time {start} {
 }
 ```
 
-`proc` sets this up to be a function (or procedure) defination. Next comes the name of the function. This is then followed by a list containing the parameters; in this case 1 parameter `{start}` and then followed by the function body. Note that the body curly brace starts on this line, it cannot be on the following line.  The function returns a value.  The returned value is a compund evaluation (square braces) that starts by reading the system clock `[clock seconds]` and does the math to subtract out the `$start` parameter.
+`proc` sets this up to be a function (or procedure) defination. Next comes the name of the function. This is then followed by a list containing the parameters; in this case 1 parameter `{start}` and then followed by the function body. Note that the body curly brace starts on this line, it cannot be on the following line.  The function returns a value.  The returned value is a compound evaluation (square braces) that starts by reading the system clock `[clock seconds]` and does the math to subtract out the `$start` parameter.
 
 ## Setup, Logic, and finish
 
