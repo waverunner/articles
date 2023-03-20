@@ -1,5 +1,10 @@
 #!/usr/local/opt/tcl-tk/bin/wish
-#!/usr/local/Caskroom/miniconda/base/envs/ansible2/bin/wish
+
+set LOW 1
+set HIGH 100
+set STATUS ""
+set GUESS ""
+set num [expr round(rand()*100)]
 
 proc Validate {var} {
 	if { [string is integer $var] } {
@@ -32,30 +37,17 @@ proc check_guess {guess num} {
 	set GUESS ""
 }
 
-set LOW 1
-set HIGH 100
-set STATUS ""
-set GUESS ""
-
-set num [expr round(rand()*100)]
-#set starttime [clock seconds]
-#set guess -1
-#set count 0
-
 label .inst -text "Enter a number between: "
 label .low -textvariable LOW
 label .dash -text "-"
 label .high -textvariable HIGH
 label .status -text "Status:"
 label .result -textvariable STATUS
-#button .guess -text "Guess" -command { puts "ouch!" }
 button .guess -text "Guess" -command { check_guess $GUESS $num }
 entry .entry -width 3 -relief sunken -bd 2 -textvariable GUESS -validate all \
 	-validatecommand { Validate %P }
-#-command { check_guess $GUESS $num }
 focus .entry
 button .quit -text "Quit" -command { exit }
-
 bind all <Return> {.guess invoke}
 
 grid .inst
