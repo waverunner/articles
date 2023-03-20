@@ -32,11 +32,11 @@ Most of these game-writing articles cover the typical programming language const
 
 In this article we dive into event driven programming.  With event driven programming, your executable enters into a special built-in loop which waits for things to happen and triggers code based desired outcomes.  These events can consist of things like keyboard input, mouse movement, button clicks, timing triggers, or nearly anything that your computer hardware can recognize (perhpas even from special-purpose devices).  The code in your program sets the stage for what it should present to the end user, what kinds of inputs to look for, how to behave when these inputs are received, and then enters the event loop waiting for input.
 
-The concept for this article is not far  from my other Tcl articles. The big difference here is the replacement of looping constructs with GUI setup and an event loop used to process the user input.
+The concept for this article is not far from my other Tcl articles. The big difference here is the replacement of looping constructs with GUI setup and an event loop used to process the user input. The other difference is of course the various aspects of GUI development needed to make a workable user interface. With Tk GUI development we will need to look at 2 fundamental constructs called Widgets and Geometry managers.
 
-Widgets?
+Widgets are various UI elements that make up visual elements you see and interact with.  These include buttons, text areas, labels, entry fields, and various flavors of option selections like menus, check boxes, radio buttons, etc.  Widgets also include other visual elements like borders and line separators.
 
-Geometry managers
+Geometry managers play a cricial role in laying out where your Widgets actually sit in the displayed window. There are a few different kinds of gemoetry managers you can use; we'll mainly use the `grid` geometry to lay Widgets out in neat rows and explain some of the geometry manager differences at the end of this article.
 
 ## Guess the number using "wish"
 
@@ -161,7 +161,7 @@ You were not likely impressed with my mad-UI skills above. Tcl/Tk has a number o
 
 You may have also noted that the widgets used were not very fancy or modern. I used the original classic widget set reminiscant of the X windows Motif days.  There are default widget extensions called "themed widgets" which can be used to give your application a more modern and polised look and feel. 
 
-Finally in this article, I glossed over the topic of geometry managers which are used to take widgets and place them in a specific order. Nothing can be displayed to the screen unless it is managed by some kind of geometry manager.  The "grid" manager is fairly simple; it places widgets in a line left to right. Hence, I had 5 grid definations to create the 5 row application. Two other geometry managers called `place` and `pack` exist.  The `pack` manager arranges widgets around the edges of the window and the `place` manager allows for fixed placement. In addition to these geometry managers, there are special widgets called `canvas`, `text`, and `panedwindow` that can hold and manage other widgets. A full description of all these can be found in the classic Tcl/Tk reference guides and in this online reference: XXXX 
+Finally in this article, I glossed over the topic of geometry managers which are used to take widgets and place them in a specific order. Nothing can be displayed to the screen unless it is managed by some kind of geometry manager.  The "grid" manager is fairly simple; it places widgets in a line left to right. Hence, I had 5 grid definations to create the 5 row application. Two other geometry managers called `place` and `pack` exist.  The `pack` manager arranges widgets around the edges of the window and the `place` manager allows for fixed placement. In addition to these geometry managers, there are special widgets called `canvas`, `text`, and `panedwindow` that can hold and manage other widgets. A full description of all these can be found in the classic Tcl/Tk reference guides and in this online reference over at [Tk commands](https://tcl.tk/man/tcl8.7/TkCmd/index.html) documentation page.
 
 ## Conclusion
-I hope you enjoyed the article and 
+In conclusion, Tcl and Tk provide a straightforward and effective approach to building graphical user interfaces and event-driven applications. The simple guess the number game demonstrated here is just the tip of the iceberg when it comes to what you can accomplish with these tools. By continuing to learn and explore Tcl and Tk, you can unlock a world of possibilities for building powerful, user-friendly applications. So keep experimenting, keep learning, and see where your newfound Tcl and Tk skills can take you!
